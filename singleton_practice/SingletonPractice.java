@@ -10,5 +10,14 @@ public class SingletonPractice {
 
         // Check if both instances are the same
         System.out.println("Are both instances the same? " + (config1 == config2));
+
+
+        AppLogger logger1 = AppLogger.getInstance();
+        AppLogger logger2 = AppLogger.getInstance();
+        logger1.log("This is a test message.");
+        logger2.log("This is another test message.");   
+         System.out.println(
+            "Same logger: " + (logger1 == logger2)
+        );
     }
 }
